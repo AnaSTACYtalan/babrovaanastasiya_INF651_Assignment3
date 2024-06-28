@@ -1,0 +1,21 @@
+function analyzeArray(arr) {
+    // Find the maximum number in the array
+    let max = Math.max(...arr);
+
+    // Find the minimum number in the array
+    let min = Math.min(...arr);
+
+    // Calculate the average of the numbers in the array
+    let sum = arr.reduce((acc, num) => acc + num, 0);
+    let avg = sum / arr.length;
+
+    // Identify even numbers
+    let evenNumbers = arr.filter(num => num % 2 === 0);
+
+    return {
+        max: max,
+        min: min,
+        avg: avg,
+        evenNumbers: evenNumbers
+    };
+}
